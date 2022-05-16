@@ -10,12 +10,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let meal of meals | slice: (page-1) * (pageSize) : page * pageSize; index as i">
+      <tr *ngFor="let meal of meals | slice: (page-1) * (pageSize) : page * pageSize; index as i" routerLink="/meal-details">
         <th scope="row">{{ i + 1 }}</th>
         <td>
-          <a routerLink="/meal-details">
-            {{ meal.strMeal }}
-          </a>
+          {{ meal.strMeal }}
         </td>
       </tr>
     </tbody>
